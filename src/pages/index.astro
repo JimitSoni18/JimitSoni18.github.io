@@ -3,8 +3,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/index.css";
 ---
 
-<BaseLayout>
-	<button class="btn-default">hello there</button>
-	<button class="btn-alt">hello there</button>
-	<a>goto-definition</a>
+<BaseLayout title="Jimit's Portfolio" header="Checkout my portfolio!">
+	<div>
+		<img width="180" src="/profile.png" alt="It's me!!">
+		<h1>Jimit Dholakia</h1>
+	</div>
 </BaseLayout>
+
+<style>
+	img {
+		margin: 0 auto;
+	}
+	h1 {
+		font-weight: 900;
+	}
+</style>

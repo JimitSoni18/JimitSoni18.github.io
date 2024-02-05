@@ -1,0 +1,32 @@
+---
+const LINKS = [
+	{ text: "About", link: "about" },
+	{ text: "Projects", link: "projects" },
+	{ text: "Contact", link: "contact" },
+	{ text: "Hire Me", link: "hire" },
+];
+---
+
+<nav>
+	<img width="300" src="favicon.svg" />
+	<div>
+		{LINKS.map(({link, text}) => <a href={link}>{text}</a>)}
+	</div>
+</nav>
+
+<style lang="scss">
+	nav {
+		padding: 1.25rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		& > img {
+			width: 40px;
+		}
+	}
+
+	a {
+		margin: 0 0.5rem;
+		text-decoration: none;
+	}
+</style>

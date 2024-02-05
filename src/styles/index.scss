@@ -1,0 +1,84 @@
+@import "typography.css";
+
+:root {
+	--background-color: #121212;
+	--primary-color: #7241f7;
+	--button-default: #ffffff;
+	--button-hover: #7241f7;
+	--alt-button-default: #ff6f61;
+	--alt-button-hover: #ffffff;
+	--link-color: #bdc3c7;
+	--link-hover: #ecf0f1;
+	--accent-color: #e74c3c;
+	--cta-color: #2ecc71;
+	--text-color: #ecf0f1;
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	margin: 0;
+}
+
+a {
+	color: var(--link-color);
+
+	&:hover {
+		color: var(--link-hover);
+	}
+
+	transition: color 150ms ease;
+}
+
+button,
+.btn {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	transition: background-color 150ms ease;
+	padding: 0.5rem 1rem;
+	border-radius: 0.35rem;
+}
+
+.btn-default {
+	background-color: var(--button-default);
+	color: #3f3f3f;
+
+	&:hover {
+		background-color: var(--button-hover);
+		color: #fff;
+	}
+}
+
+.btn-alt {
+	background-color: var(--alt-button-default);
+	color: #fff;
+
+	&:hover {
+		background-color: var(--alt-button-hover);
+		color: #3f3f3f;
+	}
+}
+
+.cta-button {
+	background-color: var(--cta-color);
+	color: #fff;
+
+	&:hover {
+		background-color: #1d995b; /* Manually calculated darker color */
+	}
+}
+
+// TODO: use map, and add padding breakpoints
+// $breakpoints: (640px, 768px, 1024px, 1280px, 1536px, 1848px);
+
+// @each $breakpoint in $breakpoints {
+//   $index: index($breakpoints, $breakpoint);
+
+//   .container {
+//     @media (min-width: #{if($index > 1, nth($breakpoints, $index - 1), 0)}) {
+//       max-width: $breakpoint;
+//     }
+//   }
+// }
+
