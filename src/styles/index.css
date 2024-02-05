@@ -1,0 +1,59 @@
+:root {
+  --background-color: #121212; /* Black-like Dark Mode Background */
+  --primary-color: #4e5eab; /* Royal Blue */
+  --button-default: #4e5eab; /* Royal Blue for vibrant default button */
+  --button-hover: #ffffff; /* White for hover, for vibrant default button */
+  --alt-button-default: #ff6f61; /* Tomato for vibrant default button */
+  --alt-button-hover: #ffffff; /* White for hover, for the alt vibrant button */
+  --link-color: #bdc3c7; /* Silver for neutral links */
+  --link-hover: #ecf0f1; /* Lighter Silver for links on hover */
+  --accent-color: #e74c3c; /* Tomato Red for accent */
+  --cta-color: #2ecc71; /* Emerald Greenish for call to action */
+  --text-color: #ecf0f1; /* Lighter Silver for text */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+button,
+.btn {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-default {
+  background-color: var(--button-default);
+  color: #fff;
+}
+
+.btn-default:hover {
+  background-color: var(--button-hover);
+}
+
+.btn-alt {
+  background-color: var(--alt-button-default);
+  color: #fff;
+}
+
+.btn-alt:hover {
+  background-color: var(--alt-button-hover);
+}
+
+.cta-button {
+  background-color: var(--cta-color);
+  color: #fff;
+}
+
+.cta-button:hover {
+  background-color: darken(var(--cta-color), 10%);
+}
