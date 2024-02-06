@@ -70,15 +70,41 @@ button,
 }
 
 // TODO: use map, and add padding breakpoints
-// $breakpoints: (640px, 768px, 1024px, 1280px, 1536px, 1848px);
+$breakpoints: (640px, 768px, 1024px, 1280px, 1536px, 1848px);
 
-// @each $breakpoint in $breakpoints {
-//   $index: index($breakpoints, $breakpoint);
+@each $breakpoint in $breakpoints {
+	$index: index($breakpoints, $breakpoint);
 
-//   .container {
-//     @media (min-width: #{if($index > 1, nth($breakpoints, $index - 1), 0)}) {
-//       max-width: $breakpoint;
-//     }
-//   }
-// }
+	@if $index > 1 {
+		@media (min-width: #{nth($breakpoints, $index - 1)}) {
+			.container {
+				max-width: $breakpoint;
+			}
+		}
+	} @else {
+		.container {
+			max-width: $breakpoint;
+			margin: 0 auto;
+		}
+	}
+}
 
+.container {
+	padding: 1.5rem 0;
+}
+
+@media (min-width: 640px) {
+	.container {
+		padding: 2rem 0;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+		padding: 3rem 0;
+	}
+}
+@media (min-width: 1024px) {
+	.container {
+		padding: 4rem 0;
+	}
+}

@@ -15,7 +15,9 @@ import Navbar from "../components/Navbar.astro";
 			<header>{Astro.props.header || "Welcome"}</header>
 			<Navbar />
 		</div>
-		<slot>default content</slot>
+		<main>
+			<slot>default content</slot>
+		</main>
 	</body>
 </html>
 

@@ -1,13 +1,47 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/index.css";
+
+const SOCIALS = [
+	{
+		text: "Github",
+		link: "https://github.com/JimitSoni18/",
+		image: "/socials/github.svg",
+	},
+	{
+		text: "LinkedIn",
+		link: "https://linkedin.com/in/jimitsoni18/",
+		image: "/socials/linkedin.svg",
+	},
+	// {
+	// 	text: "Leetcode",
+	// 	link: "https://",
+	// 	image: "/socials/leetcode.svg",
+	// },
+	// {
+	// 	text: "",
+	// 	link: "",
+	// 	image: "/socials/.svg",
+	// },
+];
 ---
 
 <BaseLayout title="Jimit's Portfolio" header="Checkout my portfolio!">
-	<div>
-		<img width="180" src="/profile.png" alt="It's me!!">
-		<h1>Jimit Dholakia</h1>
-	</div>
+	<section class="container">
+		<div class="image-container">
+			<img width="180" src="/profile.png" alt="It's me!!" />
+		</div>
+		<h1>Lipsum.org</h1>
+		<div class="socials">
+			{
+				SOCIALS.map(({ text, link, image }) => (
+					<a href={link}>
+						<img src={image} alt={text} />
+					</a>
+				))
+			}
+		</div>
+	</section>
 </BaseLayout>
 
 <style>
@@ -16,5 +50,17 @@ import "../styles/index.css";
 	}
 	h1 {
 		font-weight: 900;
+		text-align: center;
+	}
+
+	.image-container {
+		width: max-content;
+		margin: 0 auto;
+	}
+
+	.socials {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
 	}
 </style>

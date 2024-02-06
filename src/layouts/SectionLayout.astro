@@ -1,0 +1,14 @@
+---
+const { background = "", heading = "" } = Astro.props;
+---
+
+<section
+	style={{
+		background,
+	}}
+>
+	<div class="container">
+		<h1>{heading}</h1>
+		<slot />
+	</div>
+</section>
