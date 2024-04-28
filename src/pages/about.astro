@@ -1,16 +1,28 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Image } from "astro:assets";
-import me from "assets/me/me.webp";
 ---
 
 <BaseLayout title="Jimit's Portfolio" header="Checkout my portfolio!">
 	<section class="cosmic-container mx-auto">
 		<div class="image-container">
-			<Image width="180" src={me} alt="It's me!!" class="profile-image" />
-			<h1 class="mb-3">Hello!</h1>
-			<h2>This is Jimit</h2>
+			<h1 class="mb-2">Hello!</h1>
+			<h2 class="mb-3">This is Jimit</h2>
 			<p>Web developer by day, everything developer by night</p>
 		</div>
 	</section>
 </BaseLayout>
+
+<style>
+	h1 {
+		font-weight: 900;
+		text-align: center;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	p {
+		text-align: center;
+	}
+</style>
