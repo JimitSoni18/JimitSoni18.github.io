@@ -1,50 +1,50 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/index.css";
+import { Image } from "astro:assets";
+import github from "assets/socials/github.svg";
+import linkedin from "assets/socials/linkedin.svg";
+import leetcode from "assets/socials/leetcode.svg";
+import me from "assets/me/me.webp";
 
 const SOCIALS = [
 	{
 		text: "Github",
 		link: "https://github.com/JimitSoni18/",
-		image: "/socials/github.svg",
+		image: github,
 	},
 	{
 		text: "LinkedIn",
 		link: "https://linkedin.com/in/jimitsoni18/",
-		image: "/socials/linkedin.svg",
+		image: linkedin,
 	},
-	// {
-	// 	text: "Leetcode",
-	// 	link: "https://",
-	// 	image: "/socials/leetcode.svg",
-	// },
-	// {
-	// 	text: "",
-	// 	link: "",
-	// 	image: "/socials/.svg",
-	// },
+	{
+		text: "Leetcode",
+		link: "https://leetcode.com/jimitsoni18",
+		image: leetcode,
+	},
 ];
 ---
 
 <BaseLayout title="Jimit's Portfolio" header="Checkout my portfolio!">
-	<section class="container">
+	<section class="cosmic-container mx-auto">
 		<div class="image-container">
-			<img width="180" src="/profile.png" alt="It's me!!" />
-		</div>
-		<h1>Lipsum.org</h1>
-		<div class="socials">
-			{
-				SOCIALS.map(({ text, link, image }) => (
-					<a href={link}>
-						<img src={image} alt={text} />
-					</a>
-				))
-			}
+			<Image width="180" src={me} alt="It's me!!" class="profile-image" />
+			<h1 class="mb-3">Jimit Dholakia</h1>
+			<div class="socials">
+				{
+					SOCIALS.map(({ text, link, image }) => (
+						<a target="_blank" href={link} class="social-link">
+							<Image class="social-image" width="28" src={image} alt={text} />
+						</a>
+					))
+				}
+			</div>
 		</div>
 	</section>
 </BaseLayout>
 
-<style>
+<style lang="scss">
 	img {
 		margin: 0 auto;
 	}
@@ -54,13 +54,37 @@ const SOCIALS = [
 	}
 
 	.image-container {
-		width: max-content;
 		margin: 0 auto;
 	}
 
 	.socials {
 		display: flex;
-		gap: 1rem;
-		justify-content: center;
+		margin: auto;
+		width: max-content;
+		background-color: white;
+		border-radius: 2rem;
+		padding: 0.2rem 0.25rem;
+	}
+	.social-link {
+		border-radius: 2rem;
+		padding: 0.5rem 1.5rem;
+		transition: all 0.2s ease-in;
+		&:hover {
+			box-shadow: 0px 2px 12px var(--button-hover-shadow);
+			background-color: var(--button-hover);
+			transform: translateY(-2px);
+		}
+		&:active {
+			background-color: var(--button-active);
+			transform: none;
+		}
+	}
+
+	.profile-image {
+		@apply rounded-full mb-2;
+	}
+
+	.cosmic-container {
+		@apply container mx-auto 2xl:py-20 xl:py-16 lg:py-12 sm:py-9 md:py-10 py-7;
 	}
 </style>

@@ -10,8 +10,8 @@ const LINKS = [
 
 <nav>
 	<img width="300" src="favicon.svg" />
-	<div>
-		{LINKS.map(({link, text}) => <a href={link}>{text}</a>)}
+	<div class="links-container">
+		{LINKS.map(({ link, text }) => <a href={link}>{text}</a>)}
 	</div>
 </nav>
 
@@ -27,7 +27,9 @@ const LINKS = [
 	}
 
 	a {
-		margin: 0 0.5rem;
 		text-decoration: none;
+	}
+	.links-container {
+		@apply grid grid-flow-col gap-3;
 	}
 </style>

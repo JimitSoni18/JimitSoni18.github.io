@@ -3,7 +3,9 @@
   --background-color: #121212;
   --primary-color: #7241f7;
   --button-default: #ffffff;
-  --button-hover: #7241f7;
+  --button-hover: #683df6;
+  --button-active: #6232ff;
+  --button-hover-shadow: #683df6fa;
   --alt-button-default: #ff6f61;
   --alt-button-hover: #ffffff;
   --link-color: #bdc3c7;
@@ -61,56 +63,6 @@ button,
 }
 .cta-button:hover {
   background-color: #1d995b; /* Manually calculated darker color */
-}
-
-.container {
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1848px;
-  }
-}
-.container {
-  padding: 1.5rem 0;
-}
-
-@media (min-width: 640px) {
-  .container {
-    padding: 2rem 0;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    padding: 3rem 0;
-  }
-}
-@media (min-width: 1024px) {
-  .container {
-    padding: 4rem 0;
-  }
 }
 
 /*# sourceMappingURL=index.css.map */

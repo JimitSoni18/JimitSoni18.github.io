@@ -1,110 +1,72 @@
 @import "typography.css";
 
 :root {
-	--background-color: #121212;
-	--primary-color: #7241f7;
-	--button-default: #ffffff;
-	--button-hover: #7241f7;
-	--alt-button-default: #ff6f61;
-	--alt-button-hover: #ffffff;
-	--link-color: #bdc3c7;
-	--link-hover: #ecf0f1;
-	--accent-color: #e74c3c;
-	--cta-color: #2ecc71;
-	--text-color: #ecf0f1;
+  --background-color: #121212;
+  --primary-color: #7241f7;
+  --button-default: #ffffff;
+  --button-hover: #683df6;
+  --button-active: #6232ff;
+  --button-hover-shadow: #683df6fa;
+  --alt-button-default: #ff6f61;
+  --alt-button-hover: #ffffff;
+  --link-color: #bdc3c7;
+  --link-hover: #ecf0f1;
+  --accent-color: #e74c3c;
+  --cta-color: #2ecc71;
+  --text-color: #ecf0f1;
 }
 
 body {
-	background-color: var(--background-color);
-	color: var(--text-color);
-	margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
 }
 
 a {
-	color: var(--link-color);
+  color: var(--link-color);
 
-	&:hover {
-		color: var(--link-hover);
-	}
+  &:hover {
+    color: var(--link-hover);
+  }
 
-	transition: color 150ms ease;
+  transition: color 150ms ease;
 }
 
 button,
 .btn {
-	outline: none;
-	border: none;
-	cursor: pointer;
-	transition: background-color 150ms ease;
-	padding: 0.5rem 1rem;
-	border-radius: 0.35rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.35rem;
 }
 
 .btn-default {
-	background-color: var(--button-default);
-	color: #3f3f3f;
+  background-color: var(--button-default);
+  color: #3f3f3f;
 
-	&:hover {
-		background-color: var(--button-hover);
-		color: #fff;
-	}
+  &:hover {
+    background-color: var(--button-hover);
+    color: #fff;
+  }
 }
 
 .btn-alt {
-	background-color: var(--alt-button-default);
-	color: #fff;
+  background-color: var(--alt-button-default);
+  color: #fff;
 
-	&:hover {
-		background-color: var(--alt-button-hover);
-		color: #3f3f3f;
-	}
+  &:hover {
+    background-color: var(--alt-button-hover);
+    color: #3f3f3f;
+  }
 }
 
 .cta-button {
-	background-color: var(--cta-color);
-	color: #fff;
+  background-color: var(--cta-color);
+  color: #fff;
 
-	&:hover {
-		background-color: #1d995b; /* Manually calculated darker color */
-	}
-}
-
-// TODO: use map, and add padding breakpoints
-$breakpoints: (640px, 768px, 1024px, 1280px, 1536px, 1848px);
-
-@each $breakpoint in $breakpoints {
-	$index: index($breakpoints, $breakpoint);
-
-	@if $index > 1 {
-		@media (min-width: #{nth($breakpoints, $index - 1)}) {
-			.container {
-				max-width: $breakpoint;
-			}
-		}
-	} @else {
-		.container {
-			max-width: $breakpoint;
-			margin: 0 auto;
-		}
-	}
-}
-
-.container {
-	padding: 1.5rem 0;
-}
-
-@media (min-width: 640px) {
-	.container {
-		padding: 2rem 0;
-	}
-}
-@media (min-width: 768px) {
-	.container {
-		padding: 3rem 0;
-	}
-}
-@media (min-width: 1024px) {
-	.container {
-		padding: 4rem 0;
-	}
+  &:hover {
+    background-color: #1d995b; /* Manually calculated darker color */
+  }
 }

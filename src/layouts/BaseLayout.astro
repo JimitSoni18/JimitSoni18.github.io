@@ -1,5 +1,4 @@
 ---
-// a whole lot of nothing
 import Navbar from "../components/Navbar.astro";
 ---
 
@@ -8,7 +7,9 @@ import Navbar from "../components/Navbar.astro";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=100%, initial-scale=1" />
+		<link rel="shortcut icon" href="favicon.jpeg" type="image/x-icon" />
 		<title>{Astro.props.title || "Jimit's portfolio"}</title>
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<div class="top-bar">
@@ -25,7 +26,8 @@ import Navbar from "../components/Navbar.astro";
 	.top-bar {
 		position: sticky;
 		top: 0;
-		background-color: var(--background-color);
+		background-color: transparent;
+		backdrop-filter: blur(25px);
 	}
 
 	header {

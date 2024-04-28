@@ -3,12 +3,17 @@ const { background = "", heading = "" } = Astro.props;
 ---
 
 <section
+	class="cosmic-container"
 	style={{
 		background,
 	}}
 >
-	<div class="container">
-		<h1>{heading}</h1>
-		<slot />
-	</div>
+	<h1>{heading}</h1>
+	<slot />
 </section>
+
+<style>
+	.cosmic-container {
+		@apply container mx-auto 2xl:py-20 xl:py-16 lg:py-12 md:py-10 sm:py-9 xs:py-8 py-7;
+	}
+</style>
