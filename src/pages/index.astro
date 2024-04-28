@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import "../styles/index.css";
 import { Image } from "astro:assets";
 import github from "assets/socials/github.svg";
 import linkedin from "assets/socials/linkedin.svg";
@@ -81,10 +80,10 @@ const SOCIALS = [
 	}
 
 	.profile-image {
-		@apply rounded-full mb-2;
+		@apply mb-2 rounded-full;
 	}
 
 	.cosmic-container {
-		@apply container mx-auto 2xl:py-20 xl:py-16 lg:py-12 sm:py-9 md:py-10 py-7;
+		@apply container mx-auto py-7 sm:py-9 md:py-10 lg:py-12 xl:py-16 2xl:py-20;
 	}
 </style>
