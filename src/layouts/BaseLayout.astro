@@ -12,7 +12,7 @@ import Navbar from "../components/Navbar.astro";
 	</head>
 	<body>
 		<div class="top-bar">
-			<header>{Astro.props.header || "Welcome"}</header>
+			{Astro.props.header && <header>{Astro.props.header}</header>}
 			<Navbar />
 		</div>
 		<main>

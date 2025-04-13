@@ -6,6 +6,13 @@ import linkedin from "assets/socials/linkedin.svg";
 import leetcode from "assets/socials/leetcode.svg";
 import me from "assets/me/me.webp";
 
+import ferris from "assets/likes/ferris.svg";
+import ferrisReading from "assets/likes/ferris-reading.png";
+import ferrisEmbedd from "assets/likes/embedded-ferris-soldering.png";
+import anime from "assets/likes/desk.jpg";
+
+import webrtc from "assets/likes/webrtc.png";
+
 const SOCIALS = [
 	{
 		text: "Github",
@@ -23,33 +30,100 @@ const SOCIALS = [
 		image: leetcode,
 	},
 ];
+
+const LIKES = [
+	{
+		text: "Rust",
+		src: ferris,
+		width: 120,
+	},
+	{
+		text: "Reading",
+		src: ferrisReading,
+		subText: "(Old books and articles)",
+		width: 120,
+	},
+	{
+		text: "Hardware",
+		src: ferrisEmbedd,
+		width: 120,
+	},
+	{
+		text: "Anime",
+src: "/anime2.png",
+		width: 400,
+		class: "aspect-square w-32 object-cover rounded-full",
+	},
+];
 ---
 
-<BaseLayout title="Jimit's Portfolio" header="Checkout my portfolio!">
+<BaseLayout title="Jimit's Portfolio">
 	<section class="cosmic-container mx-auto">
 		<div class="image-container">
-			<Image width="180" src={me} alt="It's me!!" class="profile-image" />
+			<Image width="180" src={me} alt="It's me!!" class="profile-image mx-auto" />
 			<h1 class="mb-3">Jimit Dholakia</h1>
 			<div class="socials">
 				{
 					SOCIALS.map(({ text, link, image }) => (
 						<a target="_blank" href={link} class="social-link">
-							<Image class="social-image" width="28" src={image} alt={text} />
+							<Image class="social-image mx-auto" width="28" src={image} alt={text} />
 						</a>
 					))
 				}
 			</div>
 		</div>
 	</section>
+	<section class="cosmic-container mx-auto">
+			<h1 class="mb-5">Likes</h1>
+			<div class="flex justify-around flex-wrap max-md:max-w-[720px] gap-10 mx-auto">
+				{LIKES.map(r => (
+					<div class="aspect-square">
+				{typeof r.src === "string"
+				? (
+				<img src={r.src} alt={r.text} class={`${r.class} mx-auto`}>
+				) :
+<Image width={r.width} src={r.src} alt={r.text} class={`${r.class} mx-auto`} />
+				}
+						<div class="text-center title">{r.text}</div>
+						{r.subText && (
+							<small>{r.subText}</small>
+						)}
+					</div>
+				))}
+			</div>
+	</section>
+	<section class="cosmic-container mx-auto">
+		<h1 class="mb-5">Is currently researching</h1>
+		<div class="flex gap-5 w-5/6 mx-auto mb-5">
+			<img src="/blockchain.jpg" height={120} alt="WebRTC" class="w-[120px]" />
+			<div>
+				<h4 class="font-semibold">EVM</h4>
+				<p>
+					Currently researching ethereum and web3
+				</p>
+			</div>
+		</div>
+		<div class="flex gap-5 w-5/6 mx-auto">
+			<Image src={webrtc} height={120} alt="WebRTC" />
+			<div>
+				<h4 class="font-semibold">WebRTC</h4>
+				<p>
+					Currently researching WebRTC for development of
+					<a class="project-link" href="https://github.com/jimitsoni18/proximiti-server">proximiti</a>
+				</p>
+			</div>
+		</div>
+	</section>
 </BaseLayout>
 
 <style lang="scss">
-	img {
-		margin: 0 auto;
-	}
 	h1 {
 		font-weight: 900;
 		text-align: center;
+	}
+
+	a.project-link {
+		text-decoration: underline dashed;
 	}
 
 	.image-container {
