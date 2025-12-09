@@ -1,0 +1,128 @@
+---
+// Resume Astro Page - education section styled like experience
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resume — Jimit Dholakia</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <style>
+      @media print {
+        .no-print-break { page-break-inside: avoid; }
+        body { background: white !important; }
+        .container { box-shadow: none !important; padding: 16px !important; }
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-gray-900 font-sans">
+    <div class="container max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-10 my-10">
+
+      <!-- Header -->
+      <header class="text-center mb-6">
+        <h1 class="text-3xl font-bold tracking-tight">Jimit Dholakia</h1>
+				<p class="text-gray-600 text-sm mt-1">Software Engineer • <a href="mailto:jimitsoni18@gmail.com">jimitsoni18@gmail.com</a> • <a href="https://linkedin.com/in/jimitsoni18">linkedin.com/in/jimitsoni18</a></p>
+        <p class="text-gray-500 text-xs mt-1">Experienced software developer focusing on scalable backends, real-time systems, and performant frontends.</p>
+      </header>
+
+      <!-- Skills -->
+      <section class="mb-8 no-print-break">
+        <h2 class="text-xl font-semibold border-b pb-1 mb-3">Skills</h2>
+        <div class="grid grid-cols-[25%_25%_auto] gap-6 text-sm">
+          <div>
+            <h3 class="font-medium mb-1">Languages</h3>
+            <ul class="list-disc ml-4 space-y-1">
+              <li>TypeScript</li>
+              <li>JavaScript</li>
+              <li>Rust</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-medium mb-1">Frameworks/Libraries</h3>
+            <ul class="list-disc ml-4 space-y-1">
+              <li>React, Redux, Next.js</li>
+              <li>SolidStart, Astro</li>
+              <li>Express, Axum</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-medium mb-1">Other Skills</h3>
+            <ul class="list-disc ml-4 space-y-1">
+              <li>SQL, Postgres, MySQL, Prisma, SQLx</li>
+              <li>MongoDB, Mongoose</li>
+              <li>System Design, Optimization, SSE, Socket.io</li>
+              <li>i18n/l10n, Linux, Networking, Cryptography, IoT</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="mb-8 no-print-break">
+        <h2 class="text-xl font-semibold border-b pb-1 mb-4">Experience</h2>
+
+        <div class="mb-6">
+          <div class="flex justify-between items-center">
+            <h3 class="text-lg font-medium">eSparkBiz Technologies Pvt. Ltd. — Software Developer</h3>
+            <span class="text-sm text-gray-500">JUNE 2024 – NOV 2025</span>
+          </div>
+          <ul class="list-disc ml-5 space-y-1 text-sm text-gray-800 leading-relaxed mt-2">
+            <li><strong>iPoint Pet App:</strong> Implemented migration engine for client data transfer and system integration.</li>
+            <li>Designed timezone-aware date/time system for dynamic per-tenant timezone consistency.</li>
+            <li>Built hybrid API versioning for backward-compatible mobile support.</li>
+            <li>Architected and developed offline syncing engine for offline-first & online-first workflows.</li>
+            <li>Developed subscription service with dynamic plans & automated recurring payments.</li>
+          </ul>
+        </div>
+
+<div class="mb-6">
+  <div class="flex justify-between items-center">
+    <h3 class="text-lg font-medium">StreamSpace AI — Front-end Developer</h3>
+    <span class="text-sm text-gray-500">FEB 2023 - JUNE 2024</span>
+  </div>
+  <ul class="list-disc ml-5 space-y-1 text-sm text-gray-800 leading-relaxed mt-2">
+    <li><strong>Cloud App:</strong> Created real-time dashboards using Socket.io, AG-Grid, and D3 for live call statistics.</li>
+    <li>Implemented system-wide fine-grained permission controls and user-specific access management.</li>
+    <li><strong>Azhai:</strong> Optimized front-end performance by reducing re-renders, minimizing API calls, improving caching, and managing front-end state efficiently.</li>
+    <li>Implemented responsive UI and optimized animations for multiple screen sizes.</li>
+  </ul>
+</div>
+      </section>
+
+      <!-- Projects -->
+      <section class="mb-8 no-print-break">
+        <h2 class="text-xl font-semibold border-b pb-1 mb-3">Projects</h2>
+        <ul class="list-disc ml-5 space-y-2 text-sm text-gray-800 leading-relaxed">
+          <li><strong>Movement Detection & Alert:</strong> Raspberry Pi Zero based motion-triggered email alert system.</li>
+          <li><strong>IoT Home Automation:</strong> ESP8266 + MQTT home automation with cloud dashboard control using Blynk.</li>
+          <li><strong>TechRadiance 2020:</strong> Led IoT team in championship, secured 3rd place.</li>
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <section>
+        <h2 class="text-xl font-semibold border-b pb-1 mb-4">Education</h2>
+
+        <div class="mb-4">
+          <div class="flex justify-between items-center">
+            <h3 class="text-lg font-medium">Amiraj College of Engineering and Technology (GTU)</h3>
+            <span class="text-sm text-gray-500">2019–2023</span>
+          </div>
+					<div>Bachelor of Engineering (CSE)</div>
+          <ul class="list-disc ml-5 space-y-1 text-sm text-gray-800 leading-relaxed mt-2">
+            <li>Active in IoT projects and competitions.</li>
+            <li>Led a team in TechRadiance 2020 IoT Championship, securing 3rd place.</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </body>
+</html>
+
+<script>
+alert("To get a PDF, press CTRL + P, then Save to PDF");
+</script>
